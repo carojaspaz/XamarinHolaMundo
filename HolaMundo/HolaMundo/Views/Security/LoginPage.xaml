@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundo.Views.Security.LoginPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Source="splash.png" WidthRequest="80" HeightRequest="80"
+                   VerticalOptions="Center" Margin="20" />
+
+            <Label Grid.Row="1" Text="Usuario:" Margin="20, 0, 0, 0" />
+            
+            <StackLayout Grid.Row="2" Orientation="Horizontal">
+                <Grid Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Image Grid.Row="0" Grid.Column="0" Source="mail.png" WidthRequest="50" HeightRequest="50" />
+                <Entry Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            
+            <Label Grid.Row="3" Text="Contraseña:" Margin="20,0,0,0"/>
+
+            <StackLayout Grid.Row="4" Orientation="Horizontal">
+                <Grid Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Image Grid.Row="0" Grid.Column="0" Source="pass.png" WidthRequest="50" HeightRequest="50" />
+                <Entry Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" IsPassword="True" />
+            </StackLayout>
+
+            <Button Grid.Row="5" Text="Login" Clicked="Login_Clicked" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

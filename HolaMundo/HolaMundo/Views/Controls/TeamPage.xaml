@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HolaMundo.Models"
+             x:Class="HolaMundo.Views.Controls.TeamPage">
+    <ContentPage.BindingContext>
+        <local:Team />
+    </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Image HeightRequest="30" WidthRequest="30" Source="{Binding ShieldUrl}" />
+            <Label Text="{Binding Name}" FontSize="Title" FontAttributes="Bold" VerticalOptions="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20,50,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0"
+                                       Source="{Binding ShieldUrl}"
+                                       Aspect="AspectFit"
+                                       HeightRequest="400"
+                                       WidthRequest="400" />
+                <Label Grid.Row="1" Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" />
+                <Label Grid.Row="2" Text="{Binding Location}" HorizontalOptions="Start" />
+                <Label Grid.Row="3" Text="{Binding BornYear}" HorizontalOptions="End"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

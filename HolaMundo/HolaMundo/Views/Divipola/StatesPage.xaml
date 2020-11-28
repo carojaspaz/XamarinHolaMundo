@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundo.Views.Divipola.StatesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Departamentos" HorizontalOptions="CenterAndExpand" />
+            <ListView Margin="20,10,20,0" ItemsSource="{Binding States}"></ListView>
+            <ActivityIndicator x:Name="activityIndicator" VerticalOptions="Center" HorizontalOptions="Center" Color="Azure" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
